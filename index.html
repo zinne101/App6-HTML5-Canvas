@@ -27,8 +27,8 @@ blah, blah, blah, blah
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="apple-mobile-web-app-capable" content="yes">
       <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-      <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-      <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+      <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+      <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
       
       <!-- the following link sets the icon image that will be placed on a device home screen if the user makes a shortcut.
       <link rel="apple-touch-icon" href="/custom_icon.png">
@@ -40,10 +40,11 @@ blah, blah, blah, blah
       	
       	// The following code lets you know when the file was last modified. 
         // This will help you know if you are looking at the new version of the file or if there is a delay on GitHub.
-        var docMod = document.lastModified;
+        // If you find the alert box annoying, comment out that line and the timestamp will still show up in the debugging console
+	
+	var docMod = document.lastModified;
         alert("This file last modified  " + docMod);
         console.log("This file last modified  " + docMod);
-        // If you find the alert box annoying, comment out that line and timestamp will still show up in the debugging console
 
       	
       </script>
