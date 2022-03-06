@@ -96,13 +96,13 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	</script>
 
 	<a onclick="addImage();" class="w3-button w3-teal"> Add An Image! </a>
-	<img id="dolphin" src="https://images.unsplash.com/photo-1570481662006-a3a1374699e8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80" alt="Dolphin" width="220" height="277">
 	<script>
-		window.onload = function addImage() {
+		function addImage() {
 			var c = document.getElementById("myCanvas");
 			var ctx = c.getContext("2d");
-			var img = document.getElementById("dolphin");
-			ctx.drawImage(img, 10, 10);
+			var img = newImage();   // Create new img element
+			img.src = "ttps://images.unsplash.com/photo-1570481662006-a3a1374699e8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80"; // Set source path
+			ctx.drawImage(img, 50, 25);
 	</script>
 
 	
