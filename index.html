@@ -68,7 +68,7 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 </style>
 
 <body>
-<div id="header" class="w3-container w3-pink">
+<div id="header" class="w3-container w3-dodger-blue">
 	<h1>App6---HTML5-Canvas</h1>
 </div>
 	
@@ -76,7 +76,7 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	
 	<canvas id="myCanvas" width="1150" height="500" style="border:1px solid #000000;">
 	</canvas>
-	<a onclick="drawRectangle();" class="w3-button w3-teal"> Add a Rectangle! </a>
+	<a onclick="drawRectangle();" class="w3-button w3-violet"> Add a Rectangle! </a>
 	<script>
 		function drawRectangle() {
 			var c = document.getElementById("myCanvas");
@@ -85,7 +85,7 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 		}
 	</script>
 
-	<a onclick="addMyName();" class="w3-button w3-teal"> Add My Name! </a>
+	<a onclick="addMyName();" class="w3-button w3-violet"> Add My Name! </a>
 	<script>
 		function addMyName() { 
 			var can = document.getElementById("myCanvas");
@@ -95,7 +95,7 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 		}
 	</script>
 
-	<a onclick="addImage();" class="w3-button w3-teal"> Add An Image! </a>
+	<a onclick="addImage();" class="w3-button w3-violet"> Add An Image! </a>
 	<script>
 		function addImage() {
 			var canvas = document.getElementById("myCanvas");
@@ -108,13 +108,13 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 		};
 	</script>
 	
-	<a onclick="clearCanvas()" class="w3-button w3-teal"> Clear Canvas </a>
+	<a onclick="clearCanvas()" class="w3-button w3-violet"> Clear Canvas </a>
 	<script>
 		function clearCanvas() {
 			var canvasss = document.getElementById("myCanvas");
 			var contexttt = canvasss.getContext("2d");
-			contexttt.clearRect(0, 0, canvas.1150, canvas.500); // 
-		}
+			contexttt.clearRect(0, 0, canvas.width, canvas.height); // 
+		};
 	</script>
 	
 	
@@ -122,7 +122,7 @@ console.log("This file last modified " + docMod); // generates message in javaSc
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 
-<footer class="w3-bottom w3-container w3-flat-carrot">
+<footer class="w3-bottom w3-container w3-dodger-blue">
 	<p>DIY!</p>
 </footer>
 
