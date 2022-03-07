@@ -7,7 +7,7 @@ THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
  
 Authors in chronological order of contribution:
 Tim Riedel
-Author 2
+Zinne Njoku
  
 Further Information:
 http://cns.utexas.edu/fri
@@ -17,10 +17,10 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-blah, blah, blah,
- 
+The goal of this code is to add a canvas to the page as well as buttons that function to add either a drawing, text, or an image to the canvas. 
+
 Known Issues:
-blah, blah, blah, blah
+An issue encountered when creating this code was remaining consistant with varibles and formatting. It was also kind of challenge creating a code to clear the canvas when a button was clicked. 
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
 -->
@@ -68,14 +68,13 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 </style>
 
 <body>
-<div id="header" class="w3-container w3-flat-carrot">
+<div id="header" class="w3-container w3-pink">
 	<h1>App6---HTML5-Canvas</h1>
 </div>
 	
-<div id="content" class="w3-container">
-	<p>Content goes here.</p>
-
-	<canvas id="myCanvas" width="1150" height="500" style="border:1px solid #000000;" style="center">
+<div id="content" class="w3-container w3-center" >
+	
+	<canvas id="myCanvas" width="1150" height="500" style="border:1px solid #000000;">
 	</canvas>
 	<a onclick="drawRectangle();" class="w3-button w3-teal"> Add a Rectangle! </a>
 	<script>
@@ -109,7 +108,14 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 		};
 	</script>
 	
-	<a onclick="" class="w3-button w3-teal"> Clear Canvas </a>
+	<a onclick="clearCanvas" class="w3-button w3-teal"> Clear Canvas </a>
+	<script>
+		function clearCanvas() {
+			var canvasss = document.getElementById("myCanvas");
+			var contexttt = canvasss.getContext("2d");
+			contexttt.clearRect(0, 0, canvas.1150, canvas.500); // 
+		}
+	</script>
 	
 	
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
