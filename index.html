@@ -89,20 +89,22 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	<a onclick="addMyName();" class="w3-button w3-teal"> Add My Name! </a>
 	<script>
 		function addMyName() { 
-			var c = document.getElementById("myCanvas");
-			var ctx = c.getContext("2d");
+			var can = document.getElementById("myCanvas");
+			var cont = c.getContext("2d");
 			ctx.font = "45px Arial";
 			ctx.fillText("Zinne Njoku", 300, 350);
 	</script>
 
 	<a onclick="addImage();" class="w3-button w3-teal"> Add An Image! </a>
 	<script>
-		function addImage() {
-			var c = document.getElementById("myCanvas");
-			var ctx = c.getContext("2d");
-			var img = document.getElementById("dolphin");
-			ctx.drawImage(img, 10, 10);
-	</script>
+		var canvas = document.getElementById("myCanvas");
+		var context = canvas.getContext("2d");
+		var dolphin = new Image();
+		dolphin.src = "https://images.unsplash.com/photo-1570481662006-a3a1374699e8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80";
+		dolphin.onload = function() {
+			context.drawImage(dolphin, 400, 400);
+		};
+</script>
 	<img id="dolphin" src="https://images.unsplash.com/photo-1570481662006-a3a1374699e8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80" alt="Dolphin" width="220" height="277">
 	
 	<a onclick="addMyName();" class="w3-button w3-teal"> Clear Canvas </a>
