@@ -68,52 +68,52 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 </style>
 
 <body>
-<div id="header" class="w3-container w3-teal">
-	<h1>App6---HTML5-Canvas</h1>
+<div id="header" class="w3-container w3-teal"> <!-- This divider separates the header from the rest of the page -->
+	<h1>App6---HTML5-Canvas</h1> <!-- This is the title for the main page --> 
 </div>
 	
-<div id="content" class="w3-container w3-center" >
+<div id="content" class="w3-container w3-center" > <!-- The container in this divder centers the contents of the page -->
 	
-	<canvas id="myCanvas" width="1150" height="500" style="border:1px solid #000000;">
+	<canvas id="myCanvas" width="1150" height="500" style="border:1px solid #000000;"> <!-- This adds the canvas to the page with the defined width and height and border style -->
 	</canvas>
-	<a onclick="drawRectangle();" class="w3-button w3-teal"> Add a Rectangle! </a>
+	<a onclick="drawRectangle();" class="w3-button w3-teal"> Add a Rectangle! </a> <!-- A button that when clicked draws a rectangle in the canvas -->
 	<script>
-		function drawRectangle() {
-			var c = document.getElementById("myCanvas");
-			var ctx = c.getContext("2d");
-			ctx.fillRect(50, 25, 150, 100);
+		function drawRectangle() { // Function to draw rectangle
+			var c = document.getElementById("myCanvas"); // This calls the canvas so we know where to add the rectangle. 
+			var ctx = c.getContext("2d"); // This method obtains context defined by the parameter of being 2d. 
+			ctx.fillRect(50, 25, 150, 100); // Draws rectangle with current fill style. The first two numbers are the coordinates on the page and the next two numbers are the width and height. 
 		}
 	</script>
 
-	<a onclick="addMyName();" class="w3-button w3-teal"> Add My Name! </a>
+	<a onclick="addMyName();" class="w3-button w3-teal"> Add My Name! </a> <!-- A button that when clicked adds text to the canvas -->
 	<script>
-		function addMyName() { 
-			var can = document.getElementById("myCanvas");
-			var cont = can.getContext("2d");
-			cont.font = "45px Arial";
-			cont.fillText("Zinne Njoku", 75, 50);
+		function addMyName() { // Function to add text
+			var can = document.getElementById("myCanvas"); // This calls the canvas so we know where to add the text.
+			var cont = can.getContext("2d"); // This method obtains context defined by the parameter of being 2d.
+			cont.font = "45px Arial"; // This defines the font style and size of the text. 
+			cont.fillText("Zinne Njoku", 75, 50); // Draws text. In the parenthesis the string was added as well as the coordinates for the text. 
 		}
 	</script>
 
-	<a onclick="addImage();" class="w3-button w3-teal"> Add An Image! </a>
+	<a onclick="addImage();" class="w3-button w3-teal"> Add An Image! </a> <!-- A button that when clicked adds an image to the canvas. -->
 	<script>
-		function addImage() {
-			var canvas = document.getElementById("myCanvas");
-			var context = canvas.getContext("2d");
-			var dolphin = new Image();
-			dolphin.src = "https://images.unsplash.com/photo-1570481662006-a3a1374699e8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80";
-			dolphin.onload = function() {
-				context.drawImage(dolphin, 125, 100, 100,100);
+		function addImage() { // Function to add image 
+			var canvas = document.getElementById("myCanvas"); // This calls the canvas so we know where to add the image.
+			var context = canvas.getContext("2d"); // This method obtains context defined by the parameter of being 2d.
+			var dolphin = new Image(); // 
+			dolphin.src = "https://images.unsplash.com/photo-1570481662006-a3a1374699e8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80"; // The "src" gives the image's location.
+			dolphin.onload = function() { // This function uses the onload event to draw the image
+				context.drawImage(dolphin, 125, 100, 100,100); // Draws image. The parameters include the varible that defines the image and its location, the next two are the coordinates, and the last two are the width and height. 
 			}
 		};
 	</script>
 	
-	<a onclick="clearCanvas()" class="w3-button w3-teal"> Clear Canvas </a>
+	<a onclick="clearCanvas()" class="w3-button w3-teal"> Clear Canvas </a> <!-- A button that when clicked claears the canvas. -->
 	<script>
-		function clearCanvas() {
-			var canvasss = document.getElementById("myCanvas");
-			var contexttt = canvasss.getContext("2d");
-			contexttt.clearRect(0, 0, 1500, 750);  
+		function clearCanvas() { // Function to clear canvas
+			var canvasss = document.getElementById("myCanvas"); // This calls the canvas so we know where we are clearing. 
+			var contexttt = canvasss.getContext("2d"); // This method obtains context defined by the parameter of being 2d. 
+			contexttt.clearRect(0, 0, 1500, 750); // Clears the pixels in the canvas. The first two numbers tell the coordinates to start at and the next two are the width and height it will end at. 
 		};
 	</script>
 	
